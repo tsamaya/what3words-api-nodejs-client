@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- node
+- '6'
+before_script:
+- npm install -g gulp
+install:
+- npm install
+env:
+  matrix:
+    secure: CPMi010Ug6M1KwCLLYShEJGOPkN1vhwIS92HpglS4R/Qrwsgd2HA8c25cEdSGA6l40jgKo27PezrzRTbXZ90Hf6KW50QLBWnUhgHRumZnxWU9FZM4HPyBSIMv6oNT2Fu513ff28R0jbfNKkF74zsXCqI3u/U1bLByqL/Np+T3BdtysFnqzrzEUFiIyOFKAAE7ir2c8ZXCdxbZAKz5Gn/7/Cdc3K1HLS3fKnEw04AvawEj/+fy1IjrZJKBa9RV9mrTqs/0pb3qFla+/3eaaDGm+qk4FJP3t+GYkUxFfnulDCkmy3VKlAPJ+NpN8h2Lf9SHCGnk8rJT7zg22NpiUCBTm5BNKOf1BCeQM2TqB7gPqRtC6AWPXrgBlpV4DhKD3lpT7MBXJEqPyNK7BlJgiS86DN0rqYt56n4eHTOUhzmoycg1m1LRD6UFmO9VC8zq/lKsM2KI+w3DWAnYF0PJAY1gT/UbL8b+Io+tt0HmSRXXmxMwBQFz9IoIvCuUtV+1JICIN7JNjG1NKOzir+ngpcUygCJCC5MAP/ADkH+z+4daS66gphYvimY8Hd/wCDgiHDSkyybvEbq20u3jwO/tplqzDZPDA38TFofZWMZyBdwiK0zcNpVYEvVani0djc5N2jhR0qCz0c4SbaYiRRUS8ZLLBshZjPmngBfUUNq1XnZPPs=

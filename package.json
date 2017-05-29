@@ -1,0 +1,39 @@
+{
+  "name": "what3wordsapi",
+  "version": "0.0.1",
+  "description": "what3words API wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsamaya/what3wordsapi.git"
+  },
+  "keywords": [
+    "what3words",
+    "api",
+    "geocode"
+  ],
+  "author": "Arnaud Ferrand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsamaya/what3wordsapi/issues"
+  },
+  "homepage": "https://github.com/tsamaya/what3wordsapi#readme",
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^4.3.1",
+    "mocha": "^3.4.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "request": "^2.81.0"
+  }
+}
