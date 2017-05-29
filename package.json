@@ -1,7 +1,7 @@
 {
-  "name": "what3wordsapi",
+  "name": "what3words-api-nodejs-client",
   "version": "0.0.1",
-  "description": "what3words API wrapper",
+  "description": "what3words api nodejs client",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
@@ -13,6 +13,8 @@
   "keywords": [
     "what3words",
     "api",
+    "node",
+    "client",
     "geocode"
   ],
   "author": "Arnaud Ferrand",
