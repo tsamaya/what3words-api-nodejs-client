@@ -8,7 +8,7 @@ Work In Progress : It exposes a subset of what3words API methods.
 
 ### what3words API key
 
-the `what3wordsapi` module allows to use an environment variable (`W3W_API_KEY`) to send requests on what3words API. Otherwise your API is a parameter of each requests.
+This library allows to use an environment variable (`W3W_API_KEY`) to send requests on what3words API. Otherwise the what3words API keyr is a parameter of each requests.
 
 `$ export W3W_API_KEY=YOUR-API-KEY`
 
