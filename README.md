@@ -33,7 +33,7 @@ what3words already maintains a dedicated client side JavaScript [library](https:
   - get you key : [login](https://what3words.com/login)
 
 2. installation
-  `$ npm install what3wordsapi`
+  `$ npm install what3words-api-nodejs-client`
 
 3. configure
   `$ export W3W_API_KEY=YOUR-API-KEY`
@@ -48,7 +48,7 @@ This function wraps what3words API method [forward](https://docs.what3words.com/
 It returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolved by API payload.
 
 ```javascript
-const what3words = require('what3wordsapi');
+const what3words = require('what3words-api-nodejs-client');
 
 what3words.forward({
   addr: 'index.home.raft'
@@ -56,9 +56,6 @@ what3words.forward({
 .then(
   (data) => {
     console.log(data);
-  },
-  (rejected) => {
-    console.error(data);
   }
 )
 .catch((err) => {
@@ -72,7 +69,7 @@ This function wraps what3words API method [reverse](https://docs.what3words.com/
 It returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolved by API payload.
 
 ```javascript
-const what3words = require('what3wordsapi');
+const what3words = require('what3words-api-nodejs-client');
 
 what3words.reverse({
   coords: '51.521251,-0.203586'
@@ -80,9 +77,6 @@ what3words.reverse({
 .then(
   (data) => {
     console.log(data);
-  },
-  (rejected) => {
-    console.error(data);
   }
 )
 .catch((err) => {
@@ -96,15 +90,12 @@ This function wraps what3words API method [languages](https://docs.what3words.co
 It returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolved by what3words API payload.
 
 ```javascript
-const what3words = require('what3wordsapi');
+const what3words = require('what3words-api-nodejs-client');
 
 what3words.languages()
 .then(
   (data) => {
     console.log(data);
-  },
-  (rejected) => {
-    console.error(data);
   }
 )
 .catch((err) => {

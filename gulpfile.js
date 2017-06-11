@@ -18,7 +18,8 @@ gulp.task('lint', () => {
   return gulp
     .src(sources)
     .pipe(eslint())
-    .pipe(eslint.format()) // Brick on failure to be super strict
+    .pipe(eslint.format())
+    // Breack on failure to be super strict
     .pipe(eslint.failOnError());
 });
 

@@ -1,6 +1,6 @@
 {
   "name": "what3words-api-nodejs-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "what3words api nodejs client",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tsamaya/what3wordsapi.git"
+    "url": "git+https://github.com/tsamaya/what3words-api-nodejs-client.git"
   },
   "keywords": [
     "what3words",
@@ -20,9 +20,9 @@
   "author": "Arnaud Ferrand",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tsamaya/what3wordsapi/issues"
+    "url": "https://github.com/tsamaya/what3words-api-nodejs-client/issues"
   },
-  "homepage": "https://github.com/tsamaya/what3wordsapi#readme",
+  "homepage": "https://github.com/tsamaya/what3words-api-nodejs-client#readme",
   "devDependencies": {
     "chai": "^4.0.0",
     "chai-http": "^3.0.0",
