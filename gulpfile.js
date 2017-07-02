@@ -1,8 +1,6 @@
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 const mocha = require('gulp-mocha');
-const istanbul = require('gulp-istanbul');
-
 
 /* eslint "arrow-body-style": ["error", "always"] */
 
@@ -26,30 +24,8 @@ gulp.task('lint', () => {
 });
 
 /**
- * TEST and Coverage
+ * TEST
  */
-gulp.task('pre-test', () => {
-  return gulp.src(sources)
-    // Covering files
-    .pipe(istanbul())
-    // Force `require` to return covered files
-    .pipe(istanbul.hookRequire());
-});
-gulp.task('coverage', ['pre-test'], () => {
-  return gulp.src(testSources)
-    .pipe(mocha({
-      timeout: 10000,
-    }))
-    // Creating the reports after tests ran
-    .pipe(istanbul.writeReports())
-    // Enforce a coverage of at least 90%
-    .pipe(istanbul.enforceThresholds({
-      thresholds: {
-        global: 90,
-      },
-    }));
-});
-
 gulp.task('mocha', () => {
   return gulp
     .src(testSources, {
