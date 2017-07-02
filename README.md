@@ -103,6 +103,20 @@ what3words.languages()
 });
 ```
 
+# Build and test
+
+## setup
+`$ npm i`
+
+## unit test
+`$ npm test`
+
+## coverage
+`$ npm run-script coverage`
+
+report is available with :
+`$ open coverage/lcov-report/index.html`
+
 # Contributing
 
 Anyone and everyone is welcome to contribute.
