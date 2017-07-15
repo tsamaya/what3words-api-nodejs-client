@@ -1,6 +1,7 @@
 # what3words-api-nodejs-client
 
 [![Build Status](https://travis-ci.org/tsamaya/what3words-api-nodejs-client.svg?branch=master)](https://travis-ci.org/tsamaya/what3words-api-nodejs-client)
+[![Coverage Status](https://coveralls.io/repos/github/tsamaya/what3words-api-nodejs-client/badge.svg?branch=add-coveralls)](https://coveralls.io/github/tsamaya/what3words-api-nodejs-client?branch=add-coveralls)
 
 [what3words-api-nodejs-client](https://github.com/tsamaya/what3words-api-nodejs-client) is Node.js client library for [what3words API](https://docs.what3words.com/api/v2).
 

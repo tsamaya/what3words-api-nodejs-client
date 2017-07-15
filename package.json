@@ -1,11 +1,12 @@
 {
   "name": "what3words-api-nodejs-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "what3words api nodejs client",
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
-    "coverage": "istanbul cover ./node_modules/.bin/_mocha test/**/*.js"
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha test/**/*.js",
+    "coveralls": "cat ./coverage/lcov.info | node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "chai": "^4.0.0",
     "chai-http": "^3.0.0",
+    "coveralls": "^2.13.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.3.0",
