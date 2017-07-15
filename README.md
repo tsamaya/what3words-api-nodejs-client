@@ -104,6 +104,72 @@ what3words.languages()
 });
 ```
 
+## standardblend(options)
+
+This function wraps what3words API method [standardblend](https://docs.what3words.com/api/v2/#standardblend)
+It returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolved by API payload.
+
+```javascript
+const what3words = require('what3words-api-nodejs-client');
+
+what3words.standardblend({
+  addr: 'planter.récolte.a',
+  lang: 'fr'
+})
+.then(
+  (data) => {
+    console.log(data);
+  }
+)
+.catch((err) => {
+  console.error(err);
+});
+```
+
+## autosuggest(options)
+
+This function wraps what3words API method [autosuggest](https://docs.what3words.com/api/v2/#autosuggest)
+It returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolved by API payload.
+
+```javascript
+const what3words = require('what3words-api-nodejs-client');
+
+what3words.autosuggest({
+  addr: 'index.home.ra',
+  lang: 'en'
+})
+.then(
+  (data) => {
+    console.log(data);
+  }
+)
+.catch((err) => {
+  console.error(err);
+});
+```
+
+## grid(options)
+
+This function wraps what3words API method [grid](https://docs.what3words.com/api/v2/#grid)
+It returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolved by API payload.
+
+```javascript
+const what3words = require('what3words-api-nodejs-client');
+
+what3words.grid({
+  bbox: '45.192,5.7237,45.188,5.7180',
+  format: 'geojson'
+})
+.then(
+  (data) => {
+    console.log(data);
+  }
+)
+.catch((err) => {
+  console.error(err);
+});
+```
+
 # Build and test
 
 ## setup
