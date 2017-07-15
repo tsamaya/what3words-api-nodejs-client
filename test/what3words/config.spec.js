@@ -51,4 +51,16 @@ describe('#config ', () => {
       delete process.env.W3W_API_HOST;
     });
   });
+  describe('endpoint env valid', () => {
+    const ENDPOINT = 'https://api.new.what3words.com/v2';
+    before(() => {
+      process.env.W3W_API_HOST = ENDPOINT;
+    });
+    it('endpoint is valid', () => {
+      expect(config.getEndpoint()).to.equal(ENDPOINT);
+    });
+    after(() => {
+      delete process.env.W3W_API_HOST;
+    });
+  });
 });
