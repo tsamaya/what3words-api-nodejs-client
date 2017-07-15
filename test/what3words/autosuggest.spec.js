@@ -107,20 +107,21 @@ describe('#autosuggest ', () => {
     });
   });
 
-  xdescribe('success', () => {
-    const addr = 'index.home.raft';
+  describe('success', () => {
+    const exact = 'index.home.raft';
+    const partial = 'index.home.r';
 
-    it(`should forward [${addr}] in \`json\``, (done) => {
+    it(`partial [${partial}]`, (done) => {
       const params = {
-        addr,
-        format: 'json',
+        addr: partial,
+        lang: 'en',
       };
       what3words
-        .forward(params)
+        .autosuggest(params)
         .then(
           (resolved) => {
             // console.log(resolved);
-            validateAS.validateJSONPayload(JSON.parse(resolved));
+            validateAS.validatePartialJSONPayload(JSON.parse(resolved));
             done();
           },
           (rejected) => {
@@ -133,17 +134,17 @@ describe('#autosuggest ', () => {
         });
     });
 
-    it(`should forward [${addr}] in \`geojson\``, (done) => {
+    it(`exact [${exact}]`, (done) => {
       const params = {
-        addr,
-        format: 'geojson',
+        addr: exact,
+        lang: 'en',
       };
       what3words
-        .forward(params)
+        .autosuggest(params)
         .then(
           (resolved) => {
             // console.log(resolved);
-            validateAS.validateGeoJSONPayload(JSON.parse(resolved));
+            validateAS.validateExactMatchJSONPayload(JSON.parse(resolved));
             done();
           },
           (rejected) => {
@@ -155,6 +156,5 @@ describe('#autosuggest ', () => {
           done(err);
         });
     });
-    // end of geojson
   });
 });

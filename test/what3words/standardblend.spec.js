@@ -107,20 +107,21 @@ describe('#standardblend ', () => {
     });
   });
 
-  xdescribe('success', () => {
-    const addr = 'index.home.raft';
+  describe('success', () => {
+    const exact = 'planter.récolte.amer';
+    const partial = 'planter.récolte.a';
 
-    it(`should forward [${addr}] in \`json\``, (done) => {
+    it(`partial [${partial}]`, (done) => {
       const params = {
-        addr,
-        format: 'json',
+        addr: partial,
+        lang: 'fr',
       };
       what3words
-        .forward(params)
+        .standardblend(params)
         .then(
           (resolved) => {
             // console.log(resolved);
-            validateAS.validateJSONPayload(JSON.parse(resolved));
+            validateAS.validatePartialBlendJSONPayload(JSON.parse(resolved));
             done();
           },
           (rejected) => {
@@ -133,17 +134,17 @@ describe('#standardblend ', () => {
         });
     });
 
-    it(`should forward [${addr}] in \`geojson\``, (done) => {
+    it(`exact [${exact}]`, (done) => {
       const params = {
-        addr,
-        format: 'geojson',
+        addr: exact,
+        lang: 'fr',
       };
       what3words
-        .forward(params)
+        .standardblend(params)
         .then(
           (resolved) => {
             // console.log(resolved);
-            validateAS.validateGeoJSONPayload(JSON.parse(resolved));
+            validateAS.validateExactMatchBlendJSONPayload(JSON.parse(resolved));
             done();
           },
           (rejected) => {
@@ -155,6 +156,5 @@ describe('#standardblend ', () => {
           done(err);
         });
     });
-    // end of geojson
   });
 });
