@@ -2,6 +2,7 @@ const languages = require('./lib/what3words/languages');
 const reverse = require('./lib/what3words/reverse');
 const forward = require('./lib/what3words/forward');
 const autosuggest = require('./lib/what3words/autosuggest');
+const autosuggestML = require('./lib/what3words/autosuggestML');
 const standardblend = require('./lib/what3words/standardblend');
 const grid = require('./lib/what3words/grid');
 const errors = require('./lib/what3words/errors');
@@ -15,6 +16,7 @@ module.exports = {
   reverse,
   forward,
   autosuggest,
+  autosuggestML,
   standardblend,
   grid,
   errors,
