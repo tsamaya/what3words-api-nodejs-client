@@ -33,9 +33,8 @@ describe('#reverse ', () => {
       what3words
         .reverse({})
         .then(
-          (resolved) => {
-            // console.log(resolved);
-            const data = JSON.parse(resolved);
+          (data) => {
+            // console.log(data);
             expect(data).to.exist;
             expect(data.code).to.exist;
             expect(data.code).to.equal(400);
@@ -58,9 +57,8 @@ describe('#reverse ', () => {
           coords: 'abc',
         })
         .then(
-          (resolved) => {
-            // console.log(resolved);
-            const data = JSON.parse(resolved);
+          (data) => {
+            // console.log(data);
             expect(data).to.exist;
             expect(data.status).to.exist;
             expect(data.status.status).to.exist;
@@ -94,7 +92,7 @@ describe('#reverse ', () => {
         .then(
           (resolved) => {
             // console.log(resolved);
-            validate.validateJSONPayload(JSON.parse(resolved));
+            validate.validateJSONPayload(resolved);
             done();
           },
           (rejected) => {
@@ -117,7 +115,7 @@ describe('#reverse ', () => {
         .then(
           (resolved) => {
             // console.log(resolved);
-            validate.validateGeoJSONPayload(JSON.parse(resolved));
+            validate.validateGeoJSONPayload(resolved);
             done();
           },
           (rejected) => {

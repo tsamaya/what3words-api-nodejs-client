@@ -33,9 +33,7 @@ describe('#forward ', () => {
       what3words
         .forward({})
         .then(
-          (resolved) => {
-            // console.log(resolved);
-            const data = JSON.parse(resolved);
+          (data) => {
             expect(data).to.exist;
             expect(data.code).to.exist;
             expect(data.code).to.equal(400);
@@ -58,9 +56,7 @@ describe('#forward ', () => {
           addr: 'abc',
         })
         .then(
-          (resolved) => {
-            // console.log(resolved);
-            const data = JSON.parse(resolved);
+          (data) => {
             expect(data).to.exist;
             expect(data.status).to.exist;
             expect(data.status.status).to.exist;
@@ -93,8 +89,7 @@ describe('#forward ', () => {
         .forward(params)
         .then(
           (resolved) => {
-            // console.log(resolved);
-            validate.validateJSONPayload(JSON.parse(resolved));
+            validate.validateJSONPayload(resolved);
             done();
           },
           (rejected) => {
@@ -117,7 +112,7 @@ describe('#forward ', () => {
         .then(
           (resolved) => {
             // console.log(resolved);
-            validate.validateGeoJSONPayload(JSON.parse(resolved));
+            validate.validateGeoJSONPayload(resolved);
             done();
           },
           (rejected) => {

@@ -8,9 +8,7 @@ const expect = require('chai').expect;
 
 describe('#languages', () => {
   it('expects return languages', (done) => {
-    what3words.languages().then((resolved) => {
-      // console.log(resolved);
-      const data = JSON.parse(resolved);
+    what3words.languages().then((data) => {
       expect(data.languages).to.exist;
       expect(data.languages.length).to.be.at.least(1);
       expect(data.languages[0].code).to.exist;

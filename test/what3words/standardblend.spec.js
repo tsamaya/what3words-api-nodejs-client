@@ -33,9 +33,8 @@ describe('#standardblend ', () => {
       what3words
         .standardblend({})
         .then(
-          (resolved) => {
-            // console.log(resolved);
-            const data = JSON.parse(resolved);
+          (data) => {
+            // console.log(data);
             expect(data).to.exist;
             expect(data.code).to.exist;
             expect(data.code).to.equal(400);
@@ -58,9 +57,8 @@ describe('#standardblend ', () => {
           addr: 'abc',
         })
         .then(
-          (resolved) => {
+          (data) => {
             // console.log(resolved);
-            const data = JSON.parse(resolved);
             expect(data).to.exist;
             expect(data.code).to.exist;
             expect(data.code).to.equal(400);
@@ -84,9 +82,8 @@ describe('#standardblend ', () => {
           lang: 'en',
         })
         .then(
-          (resolved) => {
-            // console.log(resolved);
-            const data = JSON.parse(resolved);
+          (data) => {
+            // console.log(data);
             expect(data).to.exist;
             expect(data.status).to.exist;
             expect(data.status.status).to.exist;
@@ -121,7 +118,7 @@ describe('#standardblend ', () => {
         .then(
           (resolved) => {
             // console.log(resolved);
-            validateAS.validatePartialBlendJSONPayload(JSON.parse(resolved));
+            validateAS.validatePartialBlendJSONPayload(resolved);
             done();
           },
           (rejected) => {
@@ -144,7 +141,7 @@ describe('#standardblend ', () => {
         .then(
           (resolved) => {
             // console.log(resolved);
-            validateAS.validateExactMatchBlendJSONPayload(JSON.parse(resolved));
+            validateAS.validateExactMatchBlendJSONPayload(resolved);
             done();
           },
           (rejected) => {

@@ -33,9 +33,8 @@ describe('#autosuggest ', () => {
       what3words
         .autosuggest({})
         .then(
-          (resolved) => {
-            // console.log(resolved);
-            const data = JSON.parse(resolved);
+          (data) => {
+            // console.log(data);
             expect(data).to.exist;
             expect(data.code).to.exist;
             expect(data.code).to.equal(400);
@@ -58,9 +57,8 @@ describe('#autosuggest ', () => {
           addr: 'abc',
         })
         .then(
-          (resolved) => {
-            // console.log(resolved);
-            const data = JSON.parse(resolved);
+          (data) => {
+            // console.log(data);
             expect(data).to.exist;
             expect(data.code).to.exist;
             expect(data.code).to.equal(400);
@@ -84,9 +82,8 @@ describe('#autosuggest ', () => {
           lang: 'en',
         })
         .then(
-          (resolved) => {
-            // console.log(resolved);
-            const data = JSON.parse(resolved);
+          (data) => {
+            // console.log(data);
             expect(data).to.exist;
             expect(data.status).to.exist;
             expect(data.status.status).to.exist;
@@ -121,7 +118,7 @@ describe('#autosuggest ', () => {
         .then(
           (resolved) => {
             // console.log(resolved);
-            validateAS.validatePartialJSONPayload(JSON.parse(resolved));
+            validateAS.validatePartialJSONPayload(resolved);
             done();
           },
           (rejected) => {
@@ -144,7 +141,7 @@ describe('#autosuggest ', () => {
         .then(
           (resolved) => {
             // console.log(resolved);
-            validateAS.validateExactMatchJSONPayload(JSON.parse(resolved));
+            validateAS.validateExactMatchJSONPayload(resolved);
             done();
           },
           (rejected) => {
