@@ -148,6 +148,28 @@ what3words.autosuggest({
 });
 ```
 
+## autosuggestML(options)
+
+This function wraps what3words API method [autosuggest](https://docs.what3words.com/api/v2/#autosuggest)
+It returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolved by API payload.
+
+```javascript
+const what3words = require('what3words-api-nodejs-client');
+
+what3words.autosuggestML({
+  addr: 'index.home.ra',
+  lang: 'en'
+})
+.then(
+  (data) => {
+    console.log(data);
+  }
+)
+.catch((err) => {
+  console.error(err);
+});
+```
+
 ## grid(options)
 
 This function wraps what3words API method [grid](https://docs.what3words.com/api/v2/#grid)
