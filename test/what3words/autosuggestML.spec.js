@@ -51,29 +51,27 @@ describe('#autosuggestML ', () => {
         });
     });
 
-    // it('expects to fail with no lang', (done) => {
-    //   what3words
-    //     .autosuggestML({
-    //       addr: 'index.home.r',
-    //     })
-    //     .then(
-    //       (data) => {
-    //         console.log(data);
-    //         expect(data).to.exist;
-    //         expect(data.code).to.exist;
-    //         expect(data.code).to.equal(400);
-    //         expect(data.message).to.exist;
-    //         expect(data.message).to.equal('/autosuggest-ml: missing required parameter "lang"');
-    //         done();
-    //       },
-    //       (rejected) => {
-    //         console.log(rejected);
-    //         done(rejected);
-    //       })
-    //     .catch((err) => {
-    //       done(err);
-    //     });
-    // });
+    it('without lang parameter', (done) => {
+      what3words
+        .autosuggestML({
+          addr: 'index.home.r',
+        })
+        .then(
+          (data) => {
+            // console.log(data);
+            expect(data).to.exist;
+            expect(data.suggestions).to.exist;
+            expect(data.suggestions).to.be.an('array');
+            done();
+          },
+          (rejected) => {
+            console.log(rejected);
+            done(rejected);
+          })
+        .catch((err) => {
+          done(err);
+        });
+    });
 
     it('expects to fail with invalid addr', (done) => {
       what3words

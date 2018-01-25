@@ -75,7 +75,7 @@ describe('#standardblend ', () => {
         });
     });
 
-    xit('expects to fail with invalid addr', (done) => {
+    it('expects to fail with invalid addr', (done) => {
       what3words
         .standardblend({
           addr: 'abc',
