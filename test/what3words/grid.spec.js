@@ -82,7 +82,7 @@ describe('#grid ', () => {
   describe('success', () => {
     const bbox = '45.192,5.7237,45.188,5.7180';
 
-    xit(`expects grid result [${bbox}] in \`geojson\``, (done) => {
+    it(`expects grid result [${bbox}] in \`geojson\``, (done) => {
       const params = {
         bbox,
         format: 'geojson',
