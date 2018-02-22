@@ -1,6 +1,6 @@
 {
-  "name": "what3words-api-nodejs-client",
-  "version": "0.3.2",
+  "name": "what3words-api-client",
+  "version": "0.3.3",
   "description": "what3words api nodejs client",
   "main": "index.js",
   "scripts": {
