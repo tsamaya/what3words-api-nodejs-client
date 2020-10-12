@@ -1,5 +1,7 @@
 # what3words-api-nodejs-client
 
+DEPRECATED: please prefer using the official API wrapper [@what3words/api](https://www.npmjs.com/package/@what3words/api)
+
 [![Build Status](https://travis-ci.org/tsamaya/what3words-api-nodejs-client.svg?branch=master)](https://travis-ci.org/tsamaya/what3words-api-nodejs-client)
 [![Coverage Status](https://coveralls.io/repos/github/tsamaya/what3words-api-nodejs-client/badge.svg?branch=add-coveralls)](https://coveralls.io/github/tsamaya/what3words-api-nodejs-client?branch=add-coveralls)
 
