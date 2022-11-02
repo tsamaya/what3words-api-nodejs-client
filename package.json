@@ -32,7 +32,7 @@
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.8.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-eslint": "^3.0.1",
     "gulp-mocha": "^4.3.1",
     "istanbul": "^0.4.5",
